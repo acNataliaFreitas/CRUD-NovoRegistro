@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="fragments/layout">
+<div th:fragment="conteudo">
+  <div class="container mt-3">
+    <div class="col">
+      <h1>Página de erro</h1>
+
+      <p th:if="${url}">
+        <b>Page:</b> <span th:text="${url}">Page URL</span>
+      </p>
+
+      <p th:if="${timestamp}" id='created'>
+        <b>Occurred:</b> <span th:text="${timestamp}">Timestamp</span>
+      </p>
+
+      <p th:if="${status}">
+        <b>Response Status:</b> <span th:text="${status}"></span> <span th:if="${error}" th:text="'('+${error}+')'"></span>
+      </p>
+
+      <p th:if="${message}">
+        <b>Mensagem :</b> <span th:text="${message}"></span>
+      </p>
+<!--         <b>Variáveis:</b> <span th:text="${#ctx.getVariableNames()}"></span> -->
+
+    </div>
+  </div>
+</div>

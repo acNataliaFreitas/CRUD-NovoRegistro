@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="fragments/layout">
+<div th:fragment="conteudo">
+  <div class="container mt-3">
+    <form class="col-6" method="post" th:object="${professor}">
+      <h3>Novo professor</h3>
+      <div class="form-group">
+        <label>Nome do professor</label>
+        <input th:field="*{nome}" type="text" class="form-control" autofocus>
+      </div>
+      <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </form>
+  </div>
+</div>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<div th:fragment="navbar" class="navbar navbar-dark navbar-expand-md bg-dark mb-1">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon "></span>
+  </button>
+  <div class="container">
+    <div class="col-lg-6">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white m-1" href="/">Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false"
+            > Disciplina </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/disciplinas">Lista de disciplinas</a>
+              <a class="dropdown-item" href="/disciplina-form">Nova disciplina</a>
+            </div>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false"
+            > Professor </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/professores">Lista de Professores</a>
+              <a class="dropdown-item" href="/professor-form">Novo professor</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div th:fragment="rodape">
+  <a href="#sobre" data-toggle="modal">Quem somos</a>
+
+  <!-- Modal -->
+  <div class="modal fade" id="sobre" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Projeto Sistema Web MVC e SQL</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>No segundo período o estudante desenvolverá um sistema web monolítico utilizando template engine MVC e acesso a dados
+            baseado em comandos SQL. A concepção deste projeto foi para que o estudante tenha a oportunidade tanto de utilizar uma
+            tecnologia de template engine, bem como aplicar na prática o acesso a dados de uma forma mais manual, via comandos SQL, sem
+            ainda recorrer a ferramentas modernas de mapeamento objeto-relacional.</p>
+          <p>Tecnologias utilizadas neste sistema:</p>
+          <ul>
+            <li>GitHub</li>
+            <li>Maven</li>
+            <li>Spring boot</li>
+            <li>MySQL</li>
+            <li>Javascript</li>
+            <li>JQuery</li>
+            <li>MVC</li>
+            <li>Bootstrap 4</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</html>
